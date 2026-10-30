@@ -1,11 +1,3 @@
-"""
-Pendulo - Grupo 15
-Lee los datos del Excel y calcula velocidad/aceleracion angular vs. tiempo.
-
-Instalar (una sola vez):
-    pip install pandas openpyxl numpy matplotlib
-"""
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -50,7 +42,7 @@ for nombre, df in hojas.items():
         print(f"[!] La hoja '{nombre}' no tiene las columnas "
               f"'{COL_TIEMPO}' y '{COL_ANGULO}'. Revisar la configuracion.")
 
-# Grafico rapido: angulo vs tiempo para todas las hojas
+# Grafico rapido: angulo vs tiempo para todas las hojass
 fig, ax = plt.subplots()
 for nombre, r in resultados.items():
     ax.plot(r["t"], np.rad2deg(r["theta"]), label=nombre)
